@@ -21,7 +21,7 @@ function CarouselContainer(props) {
           onChange={onTabChange}
         />
       </ContentWrapper>
-      <Carousel data={data?.results} loading={loading} endpoint={endpoint} />
+      <Carousel data={data?.results} loading={loading} />
     </div>
   );
 }

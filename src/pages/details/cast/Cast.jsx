@@ -5,7 +5,7 @@ import ContentWrapper from "../../../components/content-wrapper/ContentWrapper";
 import Img from "../../../components/lazyLoadImage/Img";
 import "./Cast.scss";
 
-const Cast = ({ data, loading }) => {
+const Cast = ({ data, loading, title }) => {
   const { url } = useSelector((state) => state.Home);
 
   const skeleton = () => {
@@ -20,10 +20,10 @@ const Cast = ({ data, loading }) => {
   return (
     <div className="castSection">
       <ContentWrapper>
-        <div className="sectionHeading">Top Cast</div>
+        <div className="sectionHeading">{title}</div>
         {!loading ? (
           <div className="listItems">
-            {data.map((item) => {
+            {data?.map((item) => {
               return (
                 <div className="listItem" key={item.id}>
                   <div className="profileImg">
