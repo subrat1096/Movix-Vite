@@ -42,7 +42,7 @@ function Header() {
 
   const searchQuery = (e) => {
     if (e.key === "Enter" && query.length > 0) {
-      navigate(`/search?query=${query}`);
+      navigate(`/search/query=${query}`);
       setTimeout(() => {
         setShowSearch(false);
       }, 1000);

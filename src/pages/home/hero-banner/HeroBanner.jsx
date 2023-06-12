@@ -27,9 +27,10 @@ function HeroBanner() {
   const navigate = useNavigate();
   const searchQuery = (e) => {
     if (e.key === "Enter" && query.length > 0) {
-      navigate(`/search?query=${query}`);
+      navigate(`/search/query=${query}`);
     }
   };
+
   return (
     <>
       <div className="heroBanner">
