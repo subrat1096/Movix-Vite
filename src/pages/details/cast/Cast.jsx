@@ -27,7 +27,13 @@ const Cast = ({ data, loading, title }) => {
               return (
                 <div className="listItem" key={item.id}>
                   <div className="profileImg">
-                    <Img src={url.profile + item.profile_path} />
+                    <Img
+                      src={
+                        item.profile_path
+                          ? url.profile + item.profile_path
+                          : avatar
+                      }
+                    />
                   </div>
                   <div className="name">{item.name}</div>
                   <div className="character">{item.charcter}</div>
