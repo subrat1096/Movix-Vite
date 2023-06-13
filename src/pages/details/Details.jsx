@@ -12,7 +12,7 @@ import Carousel from "../../components/carousel/Carousel";
 function Details() {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
-  console.log(data);
+  // console.log(data);
   const { data: videos, loading: videosloading } = useFetch(
     `/${mediaType}/${id}/videos`
   );

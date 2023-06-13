@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 import ContentWrapper from "../content-wrapper/ContentWrapper";
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/movix-logo.png";
 import "./HeaderStyle.scss";
 
 function Header() {
@@ -42,7 +42,7 @@ function Header() {
 
   const searchQuery = (e) => {
     if (e.key === "Enter" && query.length > 0) {
-      navigate(`/search/query=${query}`);
+      navigate(`/search/${query}`);
       setTimeout(() => {
         setShowSearch(false);
       }, 1000);

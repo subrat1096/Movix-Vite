@@ -7,7 +7,7 @@ import Carousel from "../../../components/carousel/Carousel";
 function CarouselContainer(props) {
   const [endpoint, setEndpoint] = useState(props.endPoint1);
   const { data, loading } = useFetch(`${props.path}${endpoint}`);
-  console.log(data);
+  // console.log(data);
   const onTabChange = (tab) => {
     setEndpoint(tab === props.tabval1 ? props.endPoint1 : props.endPoint2);
   };
